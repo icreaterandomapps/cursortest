@@ -1,0 +1,258 @@
+body {
+    margin: 24px;
+    background: #dfeaf7;
+    background-image:
+        linear-gradient(#eef5fd, #d4e4f7);
+    font-family: "Segoe UI", sans-serif;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+div {
+    width: 150px;
+    height: 150px;
+    margin: 8px;
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,.95) 0%,
+            rgba(245,250,255,.95) 45%,
+            rgba(223,236,250,.95) 46%,
+            rgba(210,226,245,.95) 100%
+        );
+
+    border: 1px solid #8fb1d9;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.95),
+        0 1px 3px rgba(0,0,0,.18);
+
+    transition: .15s;
+}
+
+div:hover {
+    border-color: #4e9df8;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,1),
+        0 0 8px rgba(70,150,255,.45);
+
+    transform: translateY(-1px);
+}
+
+div:active {
+    transform: translateY(1px);
+}
+
+h2 {
+    margin: 0;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    color: #2f3c4b;
+
+    text-align: center;
+
+    text-shadow: 0 1px white;
+
+    pointer-events: none;
+}
+/* Cursor Types */
+
+#auto { cursor: auto; }
+#none { cursor: none; }
+#pointer { cursor: pointer; }
+#crosshair { cursor: crosshair; }
+#move { cursor: move; }
+#wait { cursor: wait; }
+#help { cursor: help; }
+#text { cursor: text; }
+#vertical-text { cursor: vertical-text; }
+
+#progress { cursor: progress; }
+#copy { cursor: copy; }
+#alias { cursor: alias; }
+#cell { cursor: cell; }
+#grab { cursor: grab; }
+#grabbing { cursor: grabbing; }
+
+#no-drop { cursor: no-drop; }
+#not-allowed { cursor: not-allowed; }
+
+#all-scroll { cursor: all-scroll; }
+
+#zoom-in { cursor: zoom-in; }
+#zoom-out { cursor: zoom-out; }
+
+/* Resize */
+
+#e-resize { cursor: e-resize; }
+#ne-resize { cursor: ne-resize; }
+#n-resize { cursor: n-resize; }
+#nw-resize { cursor: nw-resize; }
+#w-resize { cursor: w-resize; }
+#sw-resize { cursor: sw-resize; }
+#s-resize { cursor: s-resize; }
+#se-resize { cursor: se-resize; }
+
+#ew-resize { cursor: ew-resize; }
+#ns-resize { cursor: ns-resize; }
+#nesw-resize { cursor: nesw-resize; }
+#nwse-resize { cursor: nwse-resize; }
+
+#col-resize { cursor: col-resize; }
+#row-resize { cursor: row-resize; }
+/* ==========================
+   Aero Theme Button
+   ========================== */
+
+#theme-toggle {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 115px;
+    height: 30px;
+
+    font: 600 12px "Segoe UI", sans-serif;
+
+    color: #23384d;
+
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #eef6ff 48%,
+        #d9eafc 49%,
+        #c8dcf4 100%
+    );
+
+    border: 1px solid #7fa7d8;
+    border-radius: 4px;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.95),
+        0 1px 2px rgba(0,0,0,.18);
+
+    cursor: pointer;
+    outline: none;
+}
+
+#theme-toggle:hover {
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        #f8fcff 45%,
+        #d8ecff 46%,
+        #b8d8fb
+    );
+
+    border-color: #4b90e2;
+}
+
+#theme-toggle:active {
+    background: linear-gradient(
+        to bottom,
+        #c8dcf4,
+        #e7f2ff
+    );
+}
+
+/* ==========================
+   Dark Button
+   ========================== */
+#toolbar {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 9999;
+}
+
+/* ==========================
+   Dark Theme
+   ========================== */
+
+body.dark {
+    background: #111111 !important;
+    background-image: linear-gradient(#202020, #090909) !important;
+}
+
+/* Cursor Cards */
+body.dark div {
+    background: linear-gradient(
+        to bottom,
+        #4b4b4b 0%,
+        #3b3b3b 45%,
+        #2a2a2a 46%,
+        #1a1a1a 100%
+    );
+
+    border: 1px solid #4e9df8;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.10),
+        0 1px 3px rgba(0,0,0,.7);
+}
+
+body.dark div:hover {
+    border-color: #7fc2ff;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.15),
+        0 0 8px rgba(70,150,255,.55);
+}
+
+body.dark h2 {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.9);
+}
+
+/* ==========================
+   Theme Button
+   ========================== */
+
+body.dark #theme-toggle {
+    color: white;
+
+    background: linear-gradient(
+        to bottom,
+        #505b69 0%,
+        #3f4854 50%,
+        #2f3741 51%,
+        #242b34 100%
+    ) !important;
+
+    border: 1px solid #6aaeff !important;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.12),
+        0 1px 3px rgba(0,0,0,.7);
+}
+
+body.dark #theme-toggle:hover {
+    background: linear-gradient(
+        to bottom,
+        #5b6879,
+        #485362 50%,
+        #38414d 51%,
+        #2a313b
+    ) !important;
+
+    border-color: #9dd3ff !important;
+}
+
+body.dark #theme-toggle:active {
+    background: linear-gradient(
+        to bottom,
+        #252d37,
+        #414d5b
+    ) !important;
+}
