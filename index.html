@@ -1,0 +1,56 @@
+<header id="toolbar">
+    <button id="theme-toggle">Dark Theme</button>
+</header>
+<div id="none"><h2>None</h2></div>
+<div id="auto"><h2>Normal</h2></div>
+<div id="pointer"><h2>Pointer</h2></div>
+<div id="help"><h2>Help</h2></div>
+<div id="wait"><h2>Wait</h2></div>
+<div id="progress"><h2>Progress</h2></div>
+<div id="crosshair"><h2>Crosshair</h2></div>
+<div id="move"><h2>Move</h2></div>
+<div id="all-scroll"><h2>All Scroll</h2></div>
+
+<div id="text"><h2>Text</h2></div>
+<div id="vertical-text"><h2>Vertical Text</h2></div>
+
+<div id="copy"><h2>Copy</h2></div>
+<div id="alias"><h2>Alias</h2></div>
+<div id="cell"><h2>Cell</h2></div>
+<div id="grab"><h2>Grab</h2></div>
+<div id="grabbing"><h2>Grabbing</h2></div>
+<div id="no-drop"><h2>No Drop</h2></div>
+<div id="not-allowed"><h2>Not Allowed</h2></div>
+
+<div id="n-resize"><h2>North Resize</h2></div>
+<div id="ne-resize"><h2>North-East Resize</h2></div>
+<div id="e-resize"><h2>East Resize</h2></div>
+<div id="se-resize"><h2>South-East Resize</h2></div>
+<div id="s-resize"><h2>South Resize</h2></div>
+<div id="sw-resize"><h2>South-West Resize</h2></div>
+<div id="w-resize"><h2>West Resize</h2></div>
+<div id="nw-resize"><h2>North-West Resize</h2></div>
+
+<div id="ns-resize"><h2>North-South Resize</h2></div>
+<div id="ew-resize"><h2>East-West Resize</h2></div>
+<div id="nesw-resize"><h2>North-East South-West Resize</h2></div>
+<div id="nwse-resize"><h2>North-West South-East Resize</h2></div>
+<div id="row-resize"><h2>Row Resize</h2></div>
+<div id="col-resize"><h2>Column Resize</h2></div>
+
+<div id="zoom-in"><h2>Zoom In</h2></div>
+<div id="zoom-out"><h2>Zoom Out</h2></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("theme-toggle");
+
+    button.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+
+        button.textContent = document.body.classList.contains("dark")
+            ? "Light Theme"
+            : "Dark Theme";
+    });
+});
+</script>
