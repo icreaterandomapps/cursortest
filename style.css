@@ -218,6 +218,11 @@ h2 {
    Dark Theme
    ========================== */
 
+body.dark {
+    background: #111111;
+    background-image:
+        linear-gradient(#202020, #090909);
+}
 
 /* Cursor Cards */
 body.dark div {
