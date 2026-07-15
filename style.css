@@ -1,20 +1,21 @@
 body {
     margin: 24px;
 
-    background:
-        url("https://wallpapercave.com/wp/wp3572019.jpg")
-        center center / cover
-        fixed
-        no-repeat;
+    background-color: #5d8cc8;
+    background-image: url("https://wallpapercave.com/wp/wp3572019.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+
+    /* Don't scale the wallpaper */
+    background-size: auto;
 
     font-family: "Segoe UI", sans-serif;
 
     user-select: none;
     -webkit-user-select: none;
 
-    transition:
-        background .35s ease,
-        color .35s ease;
+    transition: background-color .35s ease;
 }
 }
 
