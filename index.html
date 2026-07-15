@@ -78,12 +78,12 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     // Theme button
     const themeButton = document.getElementById("theme-toggle");
 
-    themeButton.addEventListener("click", () => {
+    themeButton.onclick = function () {
 
         document.body.classList.toggle("dark");
 
@@ -91,28 +91,28 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.contains("dark")
                 ? "Light Theme"
                 : "Dark Theme";
-    });
+    };
 
     // Legacy section
     const legacyHeader = document.getElementById("legacy-header");
-    const legacyButton = document.getElementById("legacy-toggle");
     const legacySection = document.getElementById("legacy-section");
+    const legacyArrow = document.getElementById("legacy-arrow");
 
-    function toggleLegacy() {
+    legacyHeader.onclick = function () {
 
-        legacyHeader.classList.toggle("open");
-        legacySection.classList.toggle("open");
+        if (legacySection.style.display === "block") {
 
-        if (legacySection.classList.contains("open")) {
-            legacyButton.textContent = "Hide Legacy Cursors";
+            legacySection.style.display = "none";
+            legacyArrow.textContent = "▶";
+
         } else {
-            legacyButton.textContent = "Show Legacy Cursors";
+
+            legacySection.style.display = "block";
+            legacyArrow.textContent = "▼";
+
         }
 
-    }
-
-    legacyHeader.addEventListener("click", toggleLegacy);
-    legacyButton.addEventListener("click", toggleLegacy);
+    };
 
 });
 </script>
