@@ -259,18 +259,19 @@ body.dark #theme-toggle:active {
 /* Explorer-style collapsible header */
 
 #legacy-header {
-
     clear: both;
 
-    margin: 18px 8px 14px;
+    width: calc(100% - 18px);
+    box-sizing: border-box;
 
+    margin: 18px 8px 14px;
     padding: 8px 12px;
 
     display: flex;
     align-items: center;
     gap: 10px;
 
-    font: 600 15px "Segoe UI";
+    font: 600 15px "Segoe UI", sans-serif;
 
     color: #24405f;
 
@@ -280,15 +281,14 @@ body.dark #theme-toggle:active {
 
     background: linear-gradient(
         to bottom,
-        rgba(255,255,255,.85),
-        rgba(225,238,252,.85)
+        rgba(255,255,255,.9),
+        rgba(225,238,252,.9)
     );
 
     border: 1px solid #9dbce3;
 
-    transition: .18s;
+    transition: all .18s ease;
 }
-
 #legacy-header:hover {
 
     border-color: #5aa8ff;
@@ -310,19 +310,13 @@ body.dark #theme-toggle:active {
 /* Hidden by default */
 
 #legacy-section {
-
     display: none;
-
     clear: both;
-
-    animation: fadeDown .22s ease;
-
+    overflow: hidden;
 }
 
 #legacy-section.open {
-
     display: block;
-
 }
 
 /* Rotate arrow */
