@@ -14,7 +14,6 @@
 
 <header id="toolbar">
     <button id="theme-toggle">Dark Theme</button>
-    <button id="legacy-toggle">Show Legacy Cursors</button>
 </header>
 
     
@@ -81,57 +80,41 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    const button = document.getElementById("theme-toggle");
+    // Theme button
+    const themeButton = document.getElementById("theme-toggle");
 
-    button.addEventListener("click", () => {
+    themeButton.addEventListener("click", () => {
 
         document.body.classList.toggle("dark");
 
-        button.textContent =
+        themeButton.textContent =
             document.body.classList.contains("dark")
-            ? "Light Theme"
-            : "Dark Theme";
-
+                ? "Light Theme"
+                : "Dark Theme";
     });
 
-});
-</script>
-
-<div id="zoom-out"><h2>Zoom Out</h2></div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const themeButton = document.getElementById("theme-toggle");
-
-    if (themeButton) {
-        themeButton.addEventListener("click", function () {
-
-            document.body.classList.toggle("dark");
-
-            themeButton.textContent =
-                document.body.classList.contains("dark")
-                    ? "Light Theme"
-                    : "Dark Theme";
-        });
-    }
-
+    // Legacy section
     const legacyHeader = document.getElementById("legacy-header");
+    const legacyButton = document.getElementById("legacy-toggle");
     const legacySection = document.getElementById("legacy-section");
 
-    if (legacyHeader && legacySection) {
+    function toggleLegacy() {
 
-        legacyHeader.addEventListener("click", function () {
+        legacyHeader.classList.toggle("open");
+        legacySection.classList.toggle("open");
 
-            legacyHeader.classList.toggle("open");
-            legacySection.classList.toggle("open");
-
-        });
+        if (legacySection.classList.contains("open")) {
+            legacyButton.textContent = "Hide Legacy Cursors";
+        } else {
+            legacyButton.textContent = "Show Legacy Cursors";
+        }
 
     }
 
+    legacyHeader.addEventListener("click", toggleLegacy);
+    legacyButton.addEventListener("click", toggleLegacy);
+
 });
 </script>
-
 </body>
 </html>
