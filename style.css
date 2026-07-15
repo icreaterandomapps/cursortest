@@ -2,26 +2,8 @@ body {
     margin: 24px;
 
     background:
-        linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)),
-        url("https://wallpapercave.com/wp/wp3572019.jpg") center top no-repeat,
-        linear-gradient(
-            to bottom,
-            #edf5fd 0%,
-            #dcecfb 20%,
-            #c6def7 45%,
-            #b3d1f3 70%,
-            #a3c5ec 100%
-        );
-
-    background-size:
-        auto,
-        1200px auto,
-        auto;
-
-    background-attachment:
-        fixed,
-        fixed,
-        fixed;
+        linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.22)),
+        url("https://wallpapercave.com/wp/wp3572019.jpg") center center / cover no-repeat fixed;
 
     font-family: "Segoe UI", sans-serif;
 
@@ -204,23 +186,7 @@ h2 {
 body.dark {
     background:
         linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("https://wallpapercave.com/wp/wp3572019.jpg") center top no-repeat,
-        linear-gradient(
-            to bottom,
-            #252b33,
-            #1c2128,
-            #161a20
-        );
-
-    background-size:
-        auto,
-        1200px auto,
-        auto;
-
-    background-attachment:
-        fixed,
-        fixed,
-        fixed;
+        url("https://wallpapercave.com/wp/wp3572019.jpg") center center / cover no-repeat fixed;
 }
 
 /* Cursor Cards */
