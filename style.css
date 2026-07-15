@@ -362,3 +362,58 @@ body.dark #legacy-header {
     }
 
 }
+/* Don't make containers into cursor cards */
+
+#toolbar,
+#legacy-header,
+#legacy-section {
+    width: auto !important;
+    height: auto !important;
+
+    float: none !important;
+
+    display: block !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+}
+
+#legacy-header {
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 20px 8px !important;
+
+    padding: 8px 12px !important;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,.9),
+        rgba(225,238,252,.9)
+    ) !important;
+
+    border: 1px solid #9dbce3 !important;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+#legacy-section {
+    clear: both;
+    width: 100% !important;
+}
+
+#legacy-section.open {
+    display: block !important;
+}
