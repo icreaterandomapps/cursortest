@@ -97,5 +97,41 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<div id="zoom-out"><h2>Zoom Out</h2></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const themeButton = document.getElementById("theme-toggle");
+
+    if (themeButton) {
+        themeButton.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark");
+
+            themeButton.textContent =
+                document.body.classList.contains("dark")
+                    ? "Light Theme"
+                    : "Dark Theme";
+        });
+    }
+
+    const legacyHeader = document.getElementById("legacy-header");
+    const legacySection = document.getElementById("legacy-section");
+
+    if (legacyHeader && legacySection) {
+
+        legacyHeader.addEventListener("click", function () {
+
+            legacyHeader.classList.toggle("open");
+            legacySection.classList.toggle("open");
+
+        });
+
+    }
+
+});
+</script>
+
 </body>
 </html>
