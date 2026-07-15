@@ -417,3 +417,21 @@ body.dark #legacy-header {
 #legacy-section.open {
     display: block !important;
 }
+/* Legacy section fixes */
+
+body.dark #legacy-header {
+    background: linear-gradient(
+        to bottom,
+        #394351,
+        #232b35
+    ) !important;
+
+    border: 1px solid #5f9fff !important;
+    color: white !important;
+}
+
+body.dark #legacy-section {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
