@@ -1,17 +1,22 @@
 body {
     margin: 24px;
 
-    background:
-        url("https://wallpapercave.com/wp/wp3572019.jpg") top center no-repeat,
+    background: #dfeaf7;
+    background-image:
         linear-gradient(#eef5fd, #d4e4f7);
-
-    background-attachment: fixed, fixed;
-    background-size: auto, auto;
 
     font-family: "Segoe UI", sans-serif;
 
     user-select: none;
     -webkit-user-select: none;
+
+    transition: background .25s ease;
+}
+
+body.dark {
+    background: #111111;
+    background-image:
+        linear-gradient(#202020, #090909);
 }
 }
 
